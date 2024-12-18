@@ -1,0 +1,38 @@
+body {
+  margin-top: 225px;
+  font-family: "Inter", sans-serif;
+  color: black;
+  text-align: center;
+}
+
+button {
+  width: 100px;
+  font-weight: bold;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+  color: white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+#green {
+  background-color: rgb(34, 161, 34);
+}
+
+#red {
+  background-color: rgb(249, 0, 0);
+}
+
+#blue {
+  background-color: rgb(0, 152, 247);
+}
+
+#random {
+  background-color: grey;
+}
+
+#reset {
+  background-color: rgb(0, 0, 0);
+}
