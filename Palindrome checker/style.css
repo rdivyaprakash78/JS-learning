@@ -27,6 +27,10 @@ body {
   font-weight: bold;
 }
 
+#button:focus {
+  outline: none;
+}
+
 #inputandbutton {
   display: flex;
   height: 35px;

@@ -1,0 +1,17 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin-top: 225px;
+  text-align: center;
+}
+
+#button {
+  width: 150px;
+  background-color: rgb(150, 59, 236);
+  height: 35px;
+  border-radius: 7px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.125);
+}
