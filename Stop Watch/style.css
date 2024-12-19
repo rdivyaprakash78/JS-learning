@@ -1,0 +1,26 @@
+body {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#title {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 115px;
+}
+
+button {
+  width: 100px;
+  border-radius: 5px;
+  height: 30px;
+  margin-right: 10px;
+  border: none;
+  background-color: rgb(3, 199, 88);
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
