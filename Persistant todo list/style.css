@@ -1,0 +1,44 @@
+body {
+  margin-top: 50px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  justify-content: center;
+}
+
+#inputArea {
+  width: 300px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+#inputArea:focus {
+  outline: none;
+}
+
+#button {
+  margin-right: 2px;
+  border: none;
+  border-radius: 5px;
+  width: 70px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.125);
+  background-color: rgb(6, 200, 87);
+  color: white;
+  font-weight: bold;
+}
+
+#button:focus {
+  outline: none;
+  color: white;
+}
+
+#inputAreaAndButton {
+  display: flex;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+  justify-content: center;
+  width: 350px;
+  height: 30px;
+  padding: 7px;
+  margin: 0 auto;
+}
