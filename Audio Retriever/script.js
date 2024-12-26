@@ -15,32 +15,32 @@ if (navigator.mediaDevices.getUserMedia) {
         record.style.backgroundColor = "red";
       }
     });
+
+    mediarecorder.ondataavailable = (e) => {
+      chunks.push(e.data);
+    };
+
+    mediarecorder.onstop = () => {
+      let blob = new Blob([chunks, { type: "audio/webm" }]);
+      chunks = [];
+
+      let formData = new FormData();
+      formData.append("audio", blob);
+
+      fetch("/audio", {
+        method: "POST",
+        body: formData,
+      });
+    };
+
+    let setupFailure = () => {
+      alert("Error accessing audio input.");
+    };
+
+    navigator.mediaDevices
+      .getUserMedia({ audio: true })
+      .then(setupSuccess, setupFailure);
   };
-
-  mediarecorder.ondataavailable = (e) => {
-    chunks.push(e.data);
-  };
-
-  mediarecorder.onstop = () => {
-    let blob = new Blob([chunks, { type: "audio/webm" }]);
-    chunks = [];
-
-    let formData = new FormData();
-    formData.append("audio", blob);
-
-    fetch("/audio", {
-      method: "POST",
-      body: formData,
-    });
-  };
-
-  let setupFailure = () => {
-    alert("Error accessing audio input.");
-  };
-
-  navigator.mediaDevices
-    .getUserMedia({ audio: true })
-    .then(setupSuccess, setupFailure);
 } else {
   alert("Your browser does not support audio recording.");
 }
